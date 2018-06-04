@@ -1,0 +1,24 @@
+@mixin border($color:$border-color,$direction:a,$px:1px,$type:solid) {
+  @if $direction == t {
+    border-top: $px $color $type;
+  } @else
+  if $direction == r {
+    border-right: $px $color $type;
+  } @else
+  if $direction == b {
+    border-bottom: $px $color $type;
+  } @else
+  if $direction == l {
+    border-left: $px $color $type;
+  } @else
+  if $direction == x {
+    border-left: $px $color $type;
+    border-right: $px $color $type;
+  } @else
+  if $direction == y {
+    border-top: $px $color $type;
+    border-bottom: $px $color $type;
+  } @else {
+    border: $px $color $type;
+  }
+}
